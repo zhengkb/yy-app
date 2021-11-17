@@ -6,7 +6,7 @@ module.exports = {
     // proxy 配置 https://github.com/chimurai/http-proxy-middleware#proxycontext-config
     proxy: {
       '/test': {
-        target: 'http://localhost:3000',
+        target: 'http://localhost:8080',
         pathRewrite: {
           '^/api': '/' //重写的路径
         }
