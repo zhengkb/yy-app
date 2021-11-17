@@ -5,8 +5,8 @@ module.exports = {
   devServer: {
     // proxy 配置 https://github.com/chimurai/http-proxy-middleware#proxycontext-config
     proxy: {
-      '/api/gethotkey.fcg': {
-        target: 'https://c.y.qq.com/splcloud/fcgi-bin',
+      '/test': {
+        target: 'http://localhost:3000',
         pathRewrite: {
           '^/api': '/' //重写的路径
         }
