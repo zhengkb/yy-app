@@ -2,8 +2,8 @@
   <div>
     <p>hello world</p>
     <button @click="clickMe">点击我请求接口 QQ 音乐的接口</button>
-    <div v-for="(item, index) in hotkeyList" :key="index">
-      <div>{{ item.k }}</div>
+    <div>
+      <span>{{ value }}</span>
     </div>
   </div>
 </template>
@@ -14,20 +14,20 @@ import axios from "axios";
 export default {
   data() {
     return {
-      hotkeyList: [],
+      value: "",
     };
   },
   methods: {
     clickMe() {
       axios
-        .get("/test")
-        .then((res) => {
-          // this.hotkeyList = res.data.data.hotkey || []
-          console.log("res", res);
-        })
-        .catch((err) => {
-          console.log("err", err);
-        });
+          .get("/test")
+          .then((res) => {
+            this.value = res.data;
+            console.log("res", res);
+          })
+          .catch((err) => {
+            console.log("err", err);
+          });
     },
   },
 };
