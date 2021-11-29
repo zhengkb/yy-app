@@ -6,6 +6,10 @@ module.exports = {
   extends: [],
   parserOptions: {
     parser: "babel-eslint",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
   },
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "off" : "off",

@@ -2,6 +2,7 @@
   <div>
     <p>hello world</p>
     <button @click="clickMe">点击我请求接口 QQ 音乐的接口</button>
+    <button @click="toNewPage">去新的界面</button>
     <div>
       <span>{{ value }}</span>
     </div>
@@ -29,6 +30,11 @@ export default {
             console.log("err", err);
           });
     },
+    toNewPage() {
+      this.$router.push({
+        path: '/watchTV'
+      })
+    }
   },
 };
 </script>
