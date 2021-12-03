@@ -1,18 +1,16 @@
 module.exports = {
-  root: false,
-  env: {
-    node: false,
-  },
-  extends: [],
-  parserOptions: {
+    root: true,
+    parserOptions: {
+        sourceType: 'module',
+    },
     parser: "babel-eslint",
-    "ecmaFeatures": {
-      "jsx": true,
-      "modules": true
-    }
-  },
-  rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "off" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "off" : "off",
-  },
+    env: {
+        browser: true,
+        node: true,
+        es6: true,
+    },
+    rules: {
+        "no-console": process.env.NODE_ENV === "production" ? "off" : "off",
+        "no-debugger": process.env.NODE_ENV === "production" ? "off" : "off",
+    },
 };
