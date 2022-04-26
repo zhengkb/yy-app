@@ -5,19 +5,18 @@ module.exports = {
   devServer: {
     // proxy 配置 https://github.com/chimurai/http-proxy-middleware#proxycontext-config
     proxy: {
-      '/test': {
+      '/api': {
         target: 'http://localhost:8080',
         pathRewrite: {
           '^/api': '/' //重写的路径
         }
       }
-    }
-  },
-  lintOnSave: false,
-  devServer: {
+    },
     overlay: {
       warning: false,
       errors: false
-    }
-  }
+    },
+    port:8088
+  },
+  lintOnSave: false
 }

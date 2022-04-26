@@ -21,7 +21,7 @@ export default {
   methods: {
     clickMe() {
       axios
-          .get("/test")
+          .get("/api/test")
           .then((res) => {
             this.value = res.data;
             console.log("res", res);
